@@ -1,0 +1,83 @@
+/* Title */
+.neon-text {
+  font-size: 2.5rem;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+.dark-mode .neon-text {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+}
+.light-mode .neon-text {
+  color: #0077b6;
+  text-shadow: 0 0 3px #90e0ef, 0 0 6px #caf0f8;
+  font-weight: bold;
+}
+
+/* Backgrounds */
+.light-mode {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: #212529;
+}
+.dark-mode {
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: #f8f9fa;
+}
+.light-mode {
+  background: url("src/assets/light.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.dark-mode {
+  background: url("src/assets/dark-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Event Cards */
+.event-card {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0,255,255,0.3);
+}
+
+/* Buttons */
+.glow-btn {
+  border: 2px solid #0ff;
+  color: #0ff;
+  transition: all 0.3s ease;
+}
+.glow-btn:hover {
+  background-color: #0ff;
+  color: #000;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* Toast */
+.toast-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #fff;
+  animation: fadeInOut 2.5s ease forwards;
+}
+.toast-message.success { background-color: #28a745; }
+.toast-message.error { background-color: #dc3545; }
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .neon-text { font-size: 2rem; }
+}
+
+
